@@ -1,6 +1,6 @@
 #!/bin/bash
 
 # create links
-ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
-ln -s ~/.dotfiles/.vimrc ~/.vimrc
-ln -s ~/.dotfiles/.zshrc ~/.zshrc
+ln -s ~/.dotfile/.tmux.conf ~/.tmux.conf
+ln -s ~/.dotfile/.vimrc ~/.vimrc
+ln -s ~/.dotfile/.zshrc ~/.zshrc
