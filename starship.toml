@@ -1,19 +1,19 @@
-# Inserts a blank line between shell prompts
-add_newline = true
+# Do not inserts a blank line between shell prompts
+add_newline = false
 
 # Change the default prompt format
 format = """\
-[╭╴](238)$os\
-$all[╰─](238)$character"""
+[┌ ](red)$os\
+$all[└](red)$character"""
 
 # Change the default prompt characters
 [character]
-success_symbol = "[](238)"
-error_symbol = "[](238)"
+success_symbol = "[╼](red)"
+error_symbol = "[╼](red)"
 
-# No need for env variables as starship provides a way to show your current distro
+# show current distro
 [os]
-format ='[$symbol](bold white)'   
+format ='[$symbol](cyan)'   
 disabled = false
 
 [os.symbols]
@@ -23,19 +23,19 @@ Ubuntu = ""
 
 # Shows the username
 [username]
-style_user = "white bold"
-style_root = "black bold"
-format = "[$user]($style) "
-disabled = true  # disable in powershell
-show_always = false
+style_user = "green bold"
+style_root = "red bold"
+format = "\\[[$user]($style)\\] "
+disabled = false
+show_always = true
 
 [directory]
-truncation_length = 3
-truncation_symbol = "…/"
-home_symbol = "󰋞 ~"
-read_only_style = "197"
+truncation_length = 6
+truncation_symbol = '…/'
+home_symbol = "~"
+read_only_style = "red"
 read_only = "  "
-format = "at [$path]($style)[$read_only]($read_only_style) "
+format = "\\[[$path]($style)\\][$read_only]($read_only_style) "
 
 [git_branch]
 symbol = "󰊢 "
@@ -62,9 +62,6 @@ deleted = " "
 [terraform]
 format = "via [ terraform $version]($style) 壟 [$workspace]($style) "
 
-[vagrant]
-format = "via [ vagrant $version]($style) "
-
 [docker_context]
 format = "via [ $context](bold blue) "
 
@@ -73,14 +70,10 @@ format = "via [ $version](bold purple) "
 
 [python]
 symbol = "󰌠 "
-python_binary = "python3"
+python_binary = ['./venv/bin/python', 'python', 'python3']
 
 [nodejs]
 format = "via [󰎙 $version](bold green) "
-disabled = true
-
-[ruby]
-format = "via [ $version]($style) "
 
 [kubernetes]
 format = 'on [ $context\($namespace\)](bold purple) '
