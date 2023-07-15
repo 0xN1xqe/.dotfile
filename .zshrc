@@ -1,6 +1,3 @@
-# Promt
-PROMPT="%F{red}┌[%f%F{cyan}%m%f%F{red}]─[%f%F{magenta}%d%f%F{red}]%f"$'\n'"%F{red}└╼%f%F{green}$USER%f%F{yellow}$%f"
-
 # Export PATH
 export PATH=~/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/opt:$PATH
 
@@ -21,4 +18,8 @@ setopt appendhistory
 # Fish like syntax highlighting
 # Requires "zsh-syntax-highlighting" from apt
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# start Starship
+export STARSHIP_CONFIG=~/.dotfile/starship.toml
+eval "$(starship init zsh)"
 
