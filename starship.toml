@@ -3,7 +3,7 @@ add_newline = false
 
 # Change the default prompt format
 format = """\
-[┌ ](red)$os \
+[┌ ](red)$os\
 $all[└](red)$character"""
 
 # Change the default prompt characters
@@ -18,8 +18,8 @@ disabled = false
 
 [os.symbols]
 Windows = " "
-Arch = "󰣇"
-Ubuntu = ""
+Arch = "󰣇 "
+Ubuntu = " "
 
 # Shows the username
 [username]
