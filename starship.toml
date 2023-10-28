@@ -3,13 +3,13 @@ add_newline = false
 
 # Change the default prompt format
 format = """\
-[┌ ](red)$os\
-$all[└](red)$character"""
+$os\
+$all$character"""
 
 # Change the default prompt characters
 [character]
-success_symbol = "[╼](red)"
-error_symbol = "[╼](red)"
+success_symbol = "[=>](red)"
+error_symbol = "[=>](red)"
 
 # show current distro
 [os]
@@ -33,7 +33,7 @@ show_always = true
 [directory]
 truncation_length = 6
 truncation_symbol = '…/'
-home_symbol = "~"
+home_symbol = " 󰠦 "
 read_only_style = "red"
 read_only = "  "
 format = "\\[[$path]($style)\\][$read_only]($read_only_style) "
@@ -73,6 +73,10 @@ format = "via [ $version](bold purple) "
 symbol = "󰌠 "
 python_binary = ['./venv/bin/python', 'python', 'python3']
 
+[conda]
+symbol = "󱔎 "
+style = "green"
+
 [nodejs]
 format = "via [󰎙 $version](bold green) "
 
@@ -82,3 +86,5 @@ disabled = false
 [kubernetes.context_aliases]
 "clcreative-k8s-staging" = "cl-k8s-staging"
 "clcreative-k8s-production" = "cl-k8s-prod"
+
+
